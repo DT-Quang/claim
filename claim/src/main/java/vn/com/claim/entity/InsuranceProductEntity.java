@@ -7,17 +7,15 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "customer")
+@Table(name = "insurance_product")
 @Data
-public class CustomerEntity extends BaseEntity {
+public class InsuranceProductEntity extends BaseEntity {
 
+    private String coverage;
 
-    private String address;
-    private String bankName;
-    private String bankNumber;
-    private String email;
+    private String description;
+
     private String name;
-    private String phoneNumber;
 
 
 }

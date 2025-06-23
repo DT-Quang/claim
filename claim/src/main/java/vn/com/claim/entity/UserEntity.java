@@ -11,7 +11,7 @@ import java.util.Set;
 @Entity
 @Table(name = "users")
 @Data
-public class UserEntity extends BaseEntity{
+public class UserEntity extends BaseEntity {
 
     private String username;
     private String password;
@@ -25,8 +25,8 @@ public class UserEntity extends BaseEntity{
 
     @ManyToMany()
     @JoinTable(name = "user_roles",
-                joinColumns = @JoinColumn(name = "user_id"),
-                inverseJoinColumns = @JoinColumn(name = "role_id")
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Set<RoleEntity> roles = new HashSet<RoleEntity>();
 }
